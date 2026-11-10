@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Planificador de recorridos"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Origen: Universidad Piloto (por defecto)" />
+
+        <Button
+            android:id="@+id/btnGps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Usar mi ubicacion (GPS)" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1) Ubicacion de cada punto (toca para verlo en el mapa)"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/contenedorPuntos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="2) Medio de transporte"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgModo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbDriving"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Carro" />
+
+            <RadioButton
+                android:id="@+id/rbBicycling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bici" />
+
+            <RadioButton
+                android:id="@+id/rbWalking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A pie" />
+
+            <RadioButton
+                android:id="@+id/rbTransit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="3) Alternativas de ruta"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRutaEficiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ruta eficiente (punto mas cercano primero)" />
+
+        <Button
+            android:id="@+id/btnRutaOriginal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ruta en el orden asignado" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
